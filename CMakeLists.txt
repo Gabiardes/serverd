@@ -160,13 +160,15 @@ target_link_libraries(
   PRIVATE
   nlohmann_json::nlohmann_json
   httplib::httplib
+  stdc++fs
 )
 if(${PROJECT_NAME}_BUILD_EXECUTABLE AND ${PROJECT_NAME}_ENABLE_UNIT_TESTING)
   target_link_libraries(
     ${PROJECT_NAME}_LIB
     PUBLIC
-	  httplib::httplib
-	  nlohmann_json::nlohmann_json
+    httplib::httplib
+    nlohmann_json::nlohmann_json
+    stdc++fs
   )
 endif()
 
